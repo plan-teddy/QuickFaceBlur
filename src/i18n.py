@@ -83,7 +83,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "slider.confidence_hint": "Lower detects smaller faces · Higher reduces false positives",
         # Right Panel - Privacy
         "privacy.section_title": "Privacy Options",
-        "privacy.strip_metadata": "🛡️ Strip Metadata (EXIF & GPS)",
+        "privacy.strip_metadata": "🛡️ Strip Metadata (EXIF / GPS)",
         "privacy.strip_metadata_hint": "Removes GPS location, device, and date info when saving",
         # Right Panel - Quick Guide
         "guide.section_title": "Quick Guide",
@@ -168,7 +168,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "settings.detected_system": "Detected system language: {detected}",
         "settings.defaults_group": "Default Preferences",
         "settings.default_guides": "Show guide outlines by default",
-        "settings.default_strip_meta": "Strip EXIF & GPS metadata when saving by default",
+        "settings.default_strip_meta": "Strip EXIF / GPS metadata when saving by default",
         "settings.reset_btn": "Reset to Defaults",
         # Installer & Uninstaller
         "installer.window_title": "QuickFaceBlur v1.0.0 — Setup Wizard",
@@ -241,7 +241,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "slider.confidence": "Erkennungsempfindlichkeit",
         "slider.confidence_hint": "Niedriger erkennt kleine Gesichter · Höher reduziert Fehlalarme",
         "privacy.section_title": "Datenschutz-Optionen",
-        "privacy.strip_metadata": "🛡️ Metadaten (EXIF & GPS) entfernen",
+        "privacy.strip_metadata": "🛡️ Metadaten (EXIF / GPS) entfernen",
         "privacy.strip_metadata_hint": "Löscht beim Speichern automatisch GPS-Standort, Gerät und Datum",
         "guide.section_title": "Kurzanleitung",
         "guide.html": (
@@ -319,7 +319,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "settings.detected_system": "Erkannte Systemsprache: {detected}",
         "settings.defaults_group": "Standardeinstellungen",
         "settings.default_guides": "Hilfslinien standardmäßig anzeigen",
-        "settings.default_strip_meta": "EXIF- & GPS-Metadaten beim Speichern standardmäßig entfernen",
+        "settings.default_strip_meta": "EXIF- / GPS-Metadaten beim Speichern standardmäßig entfernen",
         "settings.reset_btn": "Auf Standard zurücksetzen",
         "installer.window_title": "QuickFaceBlur v1.0.0 — Installationsassistent",
         "installer.header_title": "QuickFaceBlur Installationsassistent",
@@ -541,7 +541,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "slider.confidence": "Sensibilité de détection",
         "slider.confidence_hint": "Plus bas détecte les petits visages · Plus haut réduit les faux positifs",
         "privacy.section_title": "Confidentialité",
-        "privacy.strip_metadata": "🛡️ Supprimer métadonnées (EXIF & GPS)",
+        "privacy.strip_metadata": "🛡️ Supprimer métadonnées (EXIF / GPS)",
         "privacy.strip_metadata_hint": "Efface automatiquement le lieu (GPS), l'appareil et la date à l'enregistrement",
         "guide.section_title": "Guide rapide",
         "guide.html": (
@@ -841,7 +841,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "slider.confidence": "Độ nhạy nhận diện mặt",
         "slider.confidence_hint": "Giảm để nhận diện mặt nhỏ · Tăng để giảm nhận diện nhầm",
         "privacy.section_title": "Bảo vệ quyền riêng tư",
-        "privacy.strip_metadata": "🛡️ Xóa siêu dữ liệu (EXIF & GPS)",
+        "privacy.strip_metadata": "🛡️ Xóa siêu dữ liệu (EXIF / GPS)",
         "privacy.strip_metadata_hint": "Tự động xóa vị trí chụp (GPS), thiết bị và ngày giờ khi lưu",
         "guide.section_title": "Hướng dẫn nhanh",
         "guide.html": (
@@ -919,7 +919,7 @@ TRANSLATIONS: Dict[str, Dict[str, str]] = {
         "settings.detected_system": "Ngôn ngữ hệ thống phát hiện: {detected}",
         "settings.defaults_group": "Tùy chọn mặc định",
         "settings.default_guides": "Hiển thị khung dẫn hướng theo mặc định",
-        "settings.default_strip_meta": "Xóa siêu dữ liệu EXIF & GPS khi lưu theo mặc định",
+        "settings.default_strip_meta": "Xóa siêu dữ liệu EXIF / GPS khi lưu theo mặc định",
         "settings.reset_btn": "Khôi phục mặc định",
         "installer.window_title": "QuickFaceBlur v1.0.0 — Trình cài đặt",
         "installer.header_title": "Trình cài đặt QuickFaceBlur",
