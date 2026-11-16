@@ -1,0 +1,58 @@
+name: Build Windows Release
+
+on:
+  push:
+    branches: ["main", "agy/**"]
+    tags: ["v*"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install minimal dependencies and PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Run unit and integration tests on Windows
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Build Windows Portable ZIP & Inno Setup Installer
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          New-Item -ItemType Directory -Force -Path release_out
+          python build_exe.py --portable-zip --installer
+          .\dist\QuickFaceBlur\QuickFaceBlur.exe --smoke-test
+          Copy-Item .\dist\QuickFaceBlur_Win11_Portable_v1.0.0.zip .\release_out\QuickFaceBlur_Win11_Portable_v1.0.0.zip
+          Copy-Item .\dist\QuickFaceBlur_Setup_v1.0.0.exe .\release_out\QuickFaceBlur_Setup_v1.0.0.exe
+
+      - name: Upload Windows Release Packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: QuickFaceBlur-Windows-Release
+          path: |
+            release_out/QuickFaceBlur_Win11_Portable_v1.0.0.zip
+            release_out/QuickFaceBlur_Setup_v1.0.0.exe
+          if-no-files-found: error

@@ -1,0 +1,29 @@
+# Virtual environments
+.venv/
+.venv_win/
+venv/
+env/
+
+# Python cache & test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+
+# Build & release outputs
+build/
+dist/
+release_out/
+Output/
+*.spec
+*.exe
+*.dmg
+*.pkg
+*.app/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,56 @@
+name: Build macOS Release
+
+on:
+  push:
+    branches: ["main", "agy/**"]
+    tags: ["v*"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install minimal dependencies and PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Run unit and integration tests on macOS
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Build macOS .app Bundle and .dmg Installer
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          mkdir -p release_out
+          python build_macos.py --dmg
+          ./dist/QuickFaceBlur.app/Contents/MacOS/QuickFaceBlur --smoke-test
+          cp dist/QuickFaceBlur_macOS_*_v1.0.0.dmg release_out/
+
+      - name: Upload macOS Release Package
+        uses: actions/upload-artifact@v4
+        with:
+          name: QuickFaceBlur-macOS-Release
+          path: |
+            release_out/QuickFaceBlur_macOS_*_v1.0.0.dmg
+          if-no-files-found: error
