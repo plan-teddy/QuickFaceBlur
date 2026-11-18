@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Note on Bundled Assets and Third-Party Components:
-The MIT License above applies to the QuickFaceBlur application source code.
-Pretrained AI model weights, bundled fonts, and third-party libraries are
-governed by their respective licenses (including non-commercial restrictions
-on InsightFace SCRFD model weights, SIL OFL-1.1 for Pretendard fonts, and
-LGPLv3 for PySide6/Qt). Please see THIRD_PARTY_NOTICES.md for full details.

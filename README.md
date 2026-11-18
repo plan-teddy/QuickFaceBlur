@@ -38,6 +38,8 @@
   <a href="#how-it-works-under-the-hood"><b>Architecture</b></a>
   ·
   <a href="#한국어-소개-및-사용-가이드-korean"><b>한국어 가이드</b></a>
+  ·
+  <a href="https://github.com/plan-teddy/QuickFaceBlur/discussions"><b>Discussions & Feedback</b></a>
 </p>
 
 <img src="docs/images/hero_demo.gif" alt="QuickFaceBlur Live Workflow Demo" width="100%" />

@@ -1,6 +1,6 @@
 # Third-Party Licenses & Notices
 
-QuickFaceBlur incorporates and interacts with the following third-party open-source components, fonts, and pretrained model weights.
+The [MIT License](LICENSE) applies to the QuickFaceBlur application source code. Pretrained AI model weights, bundled fonts, and third-party libraries incorporated in or distributed with QuickFaceBlur are governed by their respective licenses detailed below.
 
 ---
 

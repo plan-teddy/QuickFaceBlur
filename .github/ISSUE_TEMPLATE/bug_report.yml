@@ -1,0 +1,49 @@
+name: 🐛 Bug Report (버그 제보)
+description: Report a bug, crash, or unexpected behavior (오류나 비정상 동작을 제보해 주세요)
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! (버그를 제보해 주셔서 감사합니다. 아래 항목을 간단히 작성해 주세요.)
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System (운영체제)
+      options:
+        - macOS (Apple Silicon M1–M4)
+        - macOS (Intel)
+        - Windows 11
+        - Windows 10
+        - Linux / Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install_type
+    attributes:
+      label: Package / Run Method (실행 방식)
+      options:
+        - macOS .dmg (QuickFaceBlur.app)
+        - Windows Installer (Setup.exe)
+        - Windows Portable (.zip)
+        - Running from Python source (python main.py)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened? (어떤 문제가 발생했나요?)
+      description: Briefly describe the problem and steps to reproduce it. (발생한 현상과 재현 방법을 적어주세요.)
+      placeholder: "1. Dragged a photo into the window...\n2. Clicked Save..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots or Error Logs (스크린샷 또는 오류 메시지 - 선택)
+      description: Optional screenshots or terminal output.

@@ -1,0 +1,20 @@
+name: ✨ Feature Request (기능 제안)
+description: Suggest a new feature or UX improvement (새로운 기능이나 개선 아이디어를 제안해 주세요)
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What workflow or problem would this solve? (어떤 상황에서 필요한 기능인가요?)
+      placeholder: "e.g., When processing 100+ event photos, I want to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed feature or behavior (제안하시는 동작 방식)
+      placeholder: "Describe how you'd like it to work."
+    validations:
+      required: true
